@@ -50,7 +50,7 @@ export async function POST(req: Request) {
     ref: typeof body.ref === "string" ? body.ref.slice(0, 50) : null,
   };
 
-  const url = process.env.SUPABASE_URL;
+  const url = process.env.SUPABASE_URL ?? process.env.NEXT_PUBLIC_SUPABASE_URL;
   const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
   if (!url || !key) {
     if (process.env.NODE_ENV !== "production") {
@@ -61,7 +61,7 @@ export async function POST(req: Request) {
   }
 
   const supabase = createClient(url, key, { auth: { persistSession: false } });
-  const { error } = await supabase.from("applications").insert(row);
+  const { error } = await supabase.from("woori7_applications").insert(row);
   if (error) {
     if (error.code === "23505") return bad("이미 신청한 연락처예요. 운영자가 곧 연락드릴게요.");
     console.error("[apply] insert failed", error.message);

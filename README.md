@@ -5,7 +5,7 @@
 ## 현재 포함
 
 - 시즌 1 모집 랜딩 페이지 (`src/app/page.tsx`): 히어로 + 시즌 카운트다운, 콘셉트, DAY0~7 에피소드, 진행 방식, 최종 선택 미리보기, 안심 약속, 참여 신청서, FAQ
-- 참여 신청 API (`src/app/api/apply/route.ts`): 서버 검증 후 Supabase `applications` 테이블에 저장
+- 참여 신청 API (`src/app/api/apply/route.ts`): 서버 검증 후 Supabase `woori7_applications` 테이블에 저장
 - DB 스키마 (`supabase/schema.sql`)
 
 ## 로컬 실행
