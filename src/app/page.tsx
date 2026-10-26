@@ -69,7 +69,7 @@ function PhoneMock() {
 
 export default function Home() {
   return (
-    <main className="pb-28">
+    <main>
       {/* Header */}
       <header className="sticky top-0 z-20 border-b border-g100 bg-white/90 backdrop-blur">
         <div className="mx-auto flex h-14 max-w-xl items-center justify-between px-6">
@@ -222,15 +222,6 @@ export default function Home() {
         <p className="mt-4">© 2026 우리, 7일</p>
       </footer>
 
-      {/* Bottom CTA */}
-      <div className="fixed inset-x-0 bottom-0 z-30 bg-gradient-to-t from-white via-white to-white/0 px-6 pb-5 pt-6">
-        <a
-          href="#apply"
-          className="mx-auto block max-w-xl rounded-2xl bg-pink py-4 text-center text-lg font-bold text-white shadow-lg shadow-pink/30 transition hover:bg-pink-press"
-        >
-          시즌 1 참여 신청하기
-        </a>
-      </div>
     </main>
   );
 }
